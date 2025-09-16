@@ -1,0 +1,11 @@
+services:
+  deseq2-app:
+    container_name: deseq2-analysis
+    image: deseq2-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - dev.env
